@@ -1,0 +1,34 @@
+{
+  "name": "puppeteer-examples",
+  "version": "1.0.1",
+  "description": "Ready to run Puppeteer example from Checkly",
+  "dependencies": {
+    "mocha": "^5.2.0",
+    "puppeteer": "^22.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-checkly": "0.0.5",
+    "eslint-plugin-mocha": "^4.12.1",
+    "file-system": "^2.2.2",
+    "jest": "^21.2.1",
+    "js-comments": "^0.5.4",
+    "lodash": "^4.17.19"
+  },
+  "scripts": {
+    "lint": "eslint . --fix",
+    "test": "npx mocha --timeout 60000 tests/magnetoPurchase.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "checkly",
+      "checkly/node"
+    ],
+    "rules": {
+      "no-undef": "warn"
+    },
+    "plugins": [
+      "mocha"
+    ]
+  }
+}
